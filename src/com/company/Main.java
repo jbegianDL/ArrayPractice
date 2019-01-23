@@ -5,8 +5,6 @@
 //Each time the user inputs a value, add it to your dailyAverageTemp array
 
 package com.company;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -61,6 +59,10 @@ public class Main {
                     dailyAverageTemp[6] = usrInput7;
                     break;
             }
+        }
+
+        for(int i = 0; i<dailyAverageTemp.length; i++){
+            System.out.println(dailyAverageTemp[i]);
         }
     }
 }
