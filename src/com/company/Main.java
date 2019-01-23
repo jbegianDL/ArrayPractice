@@ -5,10 +5,22 @@
 //Each time the user inputs a value, add it to your dailyAverageTemp array
 
 package com.company;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-	    double [] dailyAverageTemp = {}
+        Scanner inputTemp = new Scanner();
+	    double [] dailyAverageTemp = new double[7];
+	    String promptDay1 = "Please enter the average temperature for Monday";
+        String promptDay2 = "Please enter the average temperature for Tuesday";
+        String promptDay3 = "Please enter the average temperature for Wednesday";
+        String promptDay4 = "Please enter the average temperature for Thursday";
+        String promptDay5 = "Please enter the average temperature for Friday";
+        String promptDay6 = "Please enter the average temperature for Saturday";
+        String promptDay7 = "Please enter the average temperature for Sunday";
+        int days = 7;
+
+        
     }
 }
