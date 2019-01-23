@@ -20,6 +20,8 @@ public class Main {
         String promptDay6 = "Please enter the average temperature for Saturday";
         String promptDay7 = "Please enter the average temperature for Sunday";
         int days = 7;
+        double sum = 0;
+        double avg = 0;
 
         for(int count = 1; count <= days; count++){
             switch(count){
@@ -64,5 +66,12 @@ public class Main {
         for(int i = 0; i<dailyAverageTemp.length; i++){
             System.out.println(dailyAverageTemp[i]);
         }
+
+        for(int i = 0; i<dailyAverageTemp.length; i++){
+            sum += dailyAverageTemp[i];
+            avg = sum / dailyAverageTemp.length;
+        }
+
+        System.out.println("Weekly Average is: " + avg);
     }
 }
