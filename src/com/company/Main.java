@@ -1,9 +1,3 @@
-//Create a new project in IntelliJ IDEA named ArrayPractice
-//Initialize your project as a Git repository and be sure to add and commit all changes as you work
-//Declare an array named dailyAverageTemp
-//Instruct the user to input daily average temperatures (in degrees Fahrenheit) for 7 days
-//Each time the user inputs a value, add it to your dailyAverageTemp array
-
 package com.company;
 import java.util.Scanner;
 
@@ -25,7 +19,7 @@ public class Main {
         double avg = 0;
         double avgCelsius = 0;
 
-        
+        //loop to prompt for input and add values to dailyAverageTemp array
         for(int count = 1; count <= days; count++){
             switch(count){
                 case 1:
@@ -66,23 +60,27 @@ public class Main {
             }
         }
 
+        //prints daily average values from dailyAverage array
         System.out.println("Daily Average in Fahrenheit: ");
         for(double i: dailyAverageTemp){
             System.out.println(i);
         }
 
+        //creates weekly average from values from dailyAverage array
         for(double i: dailyAverageTemp){
             sum += i;
             avg = sum / dailyAverageTemp.length;
         }
         System.out.println("Weekly Average is: " + avg);
 
+        //converts dailyAverage fahrenheit to celsius, assigns converted values to dailyAverageTempCelsius, and prints the converted values
         System.out.println("Daily Average converted to Celsius is: ");
         for(int i = 0; i < dailyAverageTemp.length; i++){
             dailyAverageTempCelsius[i] = ((dailyAverageTemp[i] - 32)/ 1.8);
             System.out.println(dailyAverageTempCelsius[i]);
         }
 
+        //creates weekly celsius average using weekly fahrenheit average
         avgCelsius = ((avg - 32) / 1.8);
         System.out.print("Weekly average converted to Celsius: " + avgCelsius);
 
