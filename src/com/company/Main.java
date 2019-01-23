@@ -64,12 +64,12 @@ public class Main {
             }
         }
 
-        for(int i = 0; i<dailyAverageTemp.length; i++){
-            System.out.println(dailyAverageTemp[i]);
+        for(double i: dailyAverageTemp){
+            System.out.println(i);
         }
 
-        for(int i = 0; i < dailyAverageTemp.length; i++){
-            sum += dailyAverageTemp[i];
+        for(double i: dailyAverageTemp){
+            sum += i;
             avg = sum / dailyAverageTemp.length;
         }
 
