@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner inputTemp = new Scanner(System.in);
 	    double [] dailyAverageTemp = new double[7];
+	    double [] dailyAverageTempCelsius = new double[7];
 	    String promptDay1 = "Please enter the average temperature for Monday";
         String promptDay2 = "Please enter the average temperature for Tuesday";
         String promptDay3 = "Please enter the average temperature for Wednesday";
@@ -67,11 +68,18 @@ public class Main {
             System.out.println(dailyAverageTemp[i]);
         }
 
-        for(int i = 0; i<dailyAverageTemp.length; i++){
+        for(int i = 0; i < dailyAverageTemp.length; i++){
             sum += dailyAverageTemp[i];
             avg = sum / dailyAverageTemp.length;
         }
 
         System.out.println("Weekly Average is: " + avg);
+
+        System.out.println("Daily Average converted to Celsius is: ");
+        for(double i: dailyAverageTemp){
+            i = (i - 32) / 1.8;
+            System.out.println(i);
+        }
+
     }
 }
